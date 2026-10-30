@@ -1,0 +1,6 @@
+[submodule ".kilo"]
+	path = .kilo
+	url = https://github.com/Zlays/.kilo
+[submodule "OmniRoute"]
+	path = OmniRoute
+	url = https://github.com/Zlays/OmniRoute

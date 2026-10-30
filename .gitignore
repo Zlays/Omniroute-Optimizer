@@ -1,0 +1,31 @@
+# IDE & Editor
+.idea/
+.vscode/
+*.suo
+*.user
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Node / JS
+node_modules/
+*.log
+
+# Temp & scratch
+tmp/
+temp/
+.cache/
