@@ -29,3 +29,9 @@ node_modules/
 tmp/
 temp/
 .cache/
+
+# Project Tools outputs
+tools/**/output/
+tools/**/*.out
+tools/**/*.tmp
+tools/**/*.log

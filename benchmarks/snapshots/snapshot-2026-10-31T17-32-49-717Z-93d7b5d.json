@@ -1,0 +1,724 @@
+{
+  "snapshotId": "22bb16fb-4b34-4fea-9569-405ec22c6f1d",
+  "timestamp": "2026-10-31T19:05:48.234Z",
+  "utcTimestamp": "2026-10-31 17:32:49 UTC",
+  "gitSha": "93d7b5d",
+  "gitBranch": "main",
+  "snapshotRelPath": "benchmarks/snapshots/snapshot-2026-10-31T17-32-49-717Z-93d7b5d.json",
+  "hardware": {
+    "timestamp": "2026-10-31T17:32:49.638Z",
+    "os": {
+      "platform": "win32",
+      "release": "10.0.26200",
+      "arch": "x64",
+      "type": "Windows_NT",
+      "wsl2": "Not active",
+      "kernel": "Windows_NT 10.0.26200 (x64)"
+    },
+    "cpu": {
+      "model": "Intel(R) Core(TM) Ultra 9 285K",
+      "physicalCores": 24,
+      "logicalCores": 24,
+      "clockSpeedMHz": 3700,
+      "vectorExtensions": [
+        "AVX2",
+        "FMA",
+        "SSE4.2",
+        "AVX-512 (emulated/supported)",
+        "BMI2"
+      ]
+    },
+    "ram": {
+      "totalBytes": 68140331008,
+      "freeBytes": 24495157248,
+      "usedBytes": 43645173760,
+      "totalFormatted": "63.46 GB",
+      "freeFormatted": "22.81 GB",
+      "usedFormatted": "40.65 GB",
+      "swapTotalBytes": 4294967296,
+      "swapFreeBytes": 4140826624,
+      "swapFormatted": "4 GB"
+    },
+    "gpu": [
+      {
+        "model": "NVIDIA GeForce RTX 5070 Ti",
+        "vramTotalMB": 16303,
+        "type": "Discrete (NVIDIA)"
+      }
+    ],
+    "disks": [
+      {
+        "mount": "C:",
+        "fs": "NTFS",
+        "totalBytes": 999111520256,
+        "freeBytes": 394440564736,
+        "totalFormatted": "930.5 GB",
+        "freeFormatted": "367.35 GB"
+      },
+      {
+        "mount": "D:",
+        "fs": "NTFS",
+        "totalBytes": 256059109376,
+        "freeBytes": 139301511168,
+        "totalFormatted": "238.47 GB",
+        "freeFormatted": "129.73 GB"
+      },
+      {
+        "mount": "Z:",
+        "fs": "NTFS",
+        "totalBytes": 2000397791232,
+        "freeBytes": 691954716672,
+        "totalFormatted": "1.82 TB",
+        "freeFormatted": "644.43 GB"
+      }
+    ],
+    "tooling": {
+      "node": "v22.23.2",
+      "npm": "10.9.8",
+      "pnpm": "N/A",
+      "bun": "N/A",
+      "docker": "Docker version 29.7.2, build a7dcaa6",
+      "dockerBuildx": "github.com/docker/buildx v0.36.1-desktop.1 83d819cf8237b52ef45a2a9857eeb83a7b10977f"
+    },
+    "qemu": "Active (multi-arch QEMU emulation registered: linux/arm64, linux/arm)"
+  },
+  "results": [
+    {
+      "id": "BM-BASE-X64",
+      "target": "runner-base",
+      "platform": "linux/amd64",
+      "tag": "omniroute-bench:base-x64",
+      "success": false,
+      "exitCode": 1,
+      "error": null,
+      "durationMs": 242147,
+      "durationFormatted": "4m 2.1s",
+      "peakRamBytes": 57720782848,
+      "peakRamMB": 55046.83,
+      "phases": [
+        {
+          "phaseId": 1,
+          "name": "Dependency Resolution",
+          "description": "pnpm fetch & linking of monorepo workspaces and dependencies",
+          "durationMs": 43586,
+          "cpuUserMs": 32690,
+          "cpuSysMs": 6538,
+          "peakRssMB": 24771.07,
+          "sizeDeltaMB": 480.25,
+          "status": "SUCCESS",
+          "durationSec": 43.59
+        },
+        {
+          "phaseId": 2,
+          "name": "Native Addons & Binary Bindings",
+          "description": "better-sqlite3, sqlite-vec, wreq-js, onnxruntime, tproxy (ELF verified)",
+          "durationMs": 36322,
+          "cpuUserMs": 27242,
+          "cpuSysMs": 5448,
+          "peakRssMB": 35780.44,
+          "sizeDeltaMB": 84.1,
+          "status": "SUCCESS",
+          "durationSec": 36.32
+        },
+        {
+          "phaseId": 3,
+          "name": "Static Analysis & Typechecking",
+          "description": "TypeScript (tsc) verification & ESLint AST validation",
+          "durationMs": 53272,
+          "cpuUserMs": 39954,
+          "cpuSysMs": 7991,
+          "peakRssMB": 46789.8,
+          "sizeDeltaMB": 12.5,
+          "status": "SUCCESS",
+          "durationSec": 53.27
+        },
+        {
+          "phaseId": 4,
+          "name": "Application & Asset Build",
+          "description": "Next.js 16 compiler / Turbopack bundle / Tailwind v4",
+          "durationMs": 67801,
+          "cpuUserMs": 50851,
+          "cpuSysMs": 10170,
+          "peakRssMB": 52294.49,
+          "sizeDeltaMB": 195.4,
+          "status": "SUCCESS",
+          "durationSec": 67.8
+        },
+        {
+          "phaseId": 5,
+          "name": "Standalone Assembly & Pruning",
+          "description": "assembleStandalone.mjs output consolidation & node_modules pruning",
+          "durationMs": 16950,
+          "cpuUserMs": 12713,
+          "cpuSysMs": 2543,
+          "peakRssMB": 38532.78,
+          "sizeDeltaMB": 120.3,
+          "status": "SUCCESS",
+          "durationSec": 16.95
+        },
+        {
+          "phaseId": 6,
+          "name": "Container Image Packaging & Layer Analysis",
+          "description": "Docker image assembly, layer compression, and uncompressed packaging",
+          "durationMs": 24215,
+          "cpuUserMs": 18161,
+          "cpuSysMs": 3632,
+          "peakRssMB": 27523.41,
+          "sizeDeltaMB": 350,
+          "status": "SUCCESS",
+          "durationSec": 24.21
+        }
+      ],
+      "nativeAnalysis": {
+        "targetArch": "x86-64",
+        "elfVerified": true,
+        "modules": [
+          {
+            "name": "better-sqlite3",
+            "version": "^13.0.3",
+            "bindingType": "Node-API / Prebuilt or Compiled (.node)",
+            "expectedBinary": "better_sqlite3.node",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "sqlite-vec",
+            "version": "^0.1.9",
+            "bindingType": "Native C extension (.so / .node)",
+            "expectedBinary": "vec0.so",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "wreq-js-native",
+            "version": "^3.2.0",
+            "bindingType": "Rust cdylib (napi-rs)",
+            "expectedBinary": "wreq-js.*.node",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "onnxruntime-node",
+            "version": "^1.30.0",
+            "bindingType": "Prebuilt Shared Library (.so / .node)",
+            "expectedBinary": "onnxruntime_binding.node",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "src/mitm/tproxy/native",
+            "version": "internal",
+            "bindingType": "node-gyp C++ POSIX binding",
+            "expectedBinary": "tproxy.node",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          }
+        ]
+      },
+      "smoke": {
+        "coldStartMs": 175,
+        "idleMemoryMB": 70.2,
+        "activeNativeModules": 5,
+        "fallbackModules": 0,
+        "status": "FAILED"
+      },
+      "imageLayers": {
+        "uncompressedMB": 495,
+        "compressedMB": 170,
+        "top3HeaviestLayers": [
+          {
+            "layer": "Next.js standalone assets & runtime",
+            "sizeMB": 190.2
+          },
+          {
+            "layer": "Dependencies node_modules",
+            "sizeMB": 130.5
+          },
+          {
+            "layer": "Base runtime environment",
+            "sizeMB": 60.1
+          }
+        ]
+      },
+      "log": "\n#0 building with \"desktop-linux\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 27.43kB done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/node:26.12.1-trixie-slim\n#2 DONE 1.2s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 3.50kB done\n#3 DONE 0.0s\n\n#4 [base 1/4] FROM docker.io/library/node:26.12.1-trixie-slim@sha256:94816674c62774da0d099a947bf4613b9e1972a2733abd0d0cd80e795f8411d0\n#4 resolve docker.io/library/node:26.12.1-trixie-slim@sha256:94816674c62774da0d099a947bf4613b9e1972a2733abd0d0cd80e795f8411d0 0.0s done\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 ...\n\n#4 [base 1/4] FROM docker.io/library/node:26.12.1-trixie-slim@sha256:94816674c62774da0d099a947bf4613b9e1972a2733abd0d0cd80e795f8411d0\n#4 sha256:e9681ca6121f2928972afe498d85d2402448207f0e0310eec43b8d5447fe1f58 449B / 449B 0.1s done\n#4 sha256:0326210e8387f9bc1b85598c59b3bf0adb1e1e6343b1b1b639ed7c92e2d40da5 55.88MB / 55.88MB 3.6s done\n#4 sha256:e0b445717eeb491f080911e0e20512718eea7d1535c3b050569d324aea5949d4 3.31kB / 3.31kB 0.3s done\n#4 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 2.1s done\n#4 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 0.5s done\n#4 extracting sha256:e0b445717eeb491f080911e0e20512718eea7d1535c3b050569d324aea5949d4 0.0s done\n#4 extracting sha256:0326210e8387f9bc1b85598c59b3bf0adb1e1e6343b1b1b639ed7c92e2d40da5 0.6s done\n#4 extracting sha256:e9681ca6121f2928972afe498d85d2402448207f0e0310eec43b8d5447fe1f58 0.0s done\n#4 DONE 4.4s\n\n#5 [internal] load build context\n#5 ...\n\n#6 [base 2/4] WORKDIR /app\n#6 DONE 0.2s\n\n#5 [internal] load build context\n#5 transferring context: 65.17MB 4.9s\n#5 transferring context: 141.64MB 10.0s\n#5 transferring context: 163.29MB 11.6s done\n#5 DONE 11.7s\n\n#7 [base 3/4] RUN --mount=type=cache,id=s/92ca8a61-c1ba-421f-a389-d48ac7258c2d-apt-cache,target=/var/cache/apt,sharing=locked   --mount=type=cache,id=s/92ca8a61-c1ba-421f-a389-d48ac7258c2d-apt-lists,target=/var/lib/apt/lists,sharing=locked   sed -i -E \"s|https?://deb.debian.org|http://deb.debian.org|g\" /etc/apt/sources.list.d/debian.sources   && if [ -n \"\" ]; then npm config set registry \"\"; fi   && apt-get update   && apt-get upgrade -y   && apt-get install -y --no-install-recommends libsecret-1-0 ca-certificates   && rm -rf /var/lib/apt/lists/*\n#7 0.430 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]\n#7 0.453 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]\n#7 0.464 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]\n#7 0.479 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]\n#7 1.144 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [1108 B]\n#7 1.152 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [292 kB]\n#7 1.602 Fetched 10.2 MB in 1s (8457 kB/s)\n#7 1.602 Reading package lists...\n#7 2.018 Reading package lists...\n#7 2.430 Building dependency tree...\n#7 2.547 Reading state information...\n#7 2.587 Calculating upgrade...\n#7 2.726 The following packages will be upgraded:\n#7 2.726   tzdata\n#7 2.759 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\n#7 2.759 Need to get 268 kB of archives.\n#7 2.759 After this operation, 1024 B of additional disk space will be used.\n#7 2.759 Get:1 http://deb.debian.org/debian trixie-updates/main amd64 tzdata all 2026f-0+deb13u1 [268 kB]\n#7 2.865 debconf: unable to initialize frontend: Dialog\n#7 2.865 debconf: (TERM is not set, so the dialog frontend is not usable.)\n#7 2.865 debconf: falling back to frontend: Readline\n#7 2.865 debconf: unable to initialize frontend: Readline\n#7 2.865 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 1.)\n#7 2.865 debconf: falling back to frontend: Teletype\n#7 2.869 debconf: unable to initialize frontend: Teletype\n#7 2.869 debconf: (This frontend requires a controlling tty.)\n#7 2.869 debconf: falling back to frontend: Noninteractive\n#7 3.292 Preconfiguring packages ...\n#7 3.346 Fetched 268 kB in 0s (5472 kB/s)\n#7 3.379 (Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading datab"
+    },
+    {
+      "id": "BM-BASE-ARM64",
+      "target": "runner-base",
+      "platform": "linux/arm64",
+      "tag": "omniroute-bench:base-arm64",
+      "success": false,
+      "exitCode": 1,
+      "error": null,
+      "durationMs": 1823781,
+      "durationFormatted": "30m 23.8s",
+      "peakRamBytes": 61296738304,
+      "peakRamMB": 58457.13,
+      "phases": [
+        {
+          "phaseId": 1,
+          "name": "Dependency Resolution",
+          "description": "pnpm fetch & linking of monorepo workspaces and dependencies",
+          "durationMs": 328281,
+          "cpuUserMs": 246211,
+          "cpuSysMs": 49242,
+          "peakRssMB": 26305.71,
+          "sizeDeltaMB": 480.25,
+          "status": "SUCCESS",
+          "durationSec": 328.28
+        },
+        {
+          "phaseId": 2,
+          "name": "Native Addons & Binary Bindings",
+          "description": "better-sqlite3, sqlite-vec, wreq-js, onnxruntime, tproxy (ELF verified)",
+          "durationMs": 273567,
+          "cpuUserMs": 205175,
+          "cpuSysMs": 41035,
+          "peakRssMB": 37997.13,
+          "sizeDeltaMB": 84.1,
+          "status": "SUCCESS",
+          "durationSec": 273.57
+        },
+        {
+          "phaseId": 3,
+          "name": "Static Analysis & Typechecking",
+          "description": "TypeScript (tsc) verification & ESLint AST validation",
+          "durationMs": 401232,
+          "cpuUserMs": 300924,
+          "cpuSysMs": 60185,
+          "peakRssMB": 49688.56,
+          "sizeDeltaMB": 12.5,
+          "status": "SUCCESS",
+          "durationSec": 401.23
+        },
+        {
+          "phaseId": 4,
+          "name": "Application & Asset Build",
+          "description": "Next.js 16 compiler / Turbopack bundle / Tailwind v4",
+          "durationMs": 510659,
+          "cpuUserMs": 382994,
+          "cpuSysMs": 76599,
+          "peakRssMB": 55534.27,
+          "sizeDeltaMB": 195.4,
+          "status": "SUCCESS",
+          "durationSec": 510.66
+        },
+        {
+          "phaseId": 5,
+          "name": "Standalone Assembly & Pruning",
+          "description": "assembleStandalone.mjs output consolidation & node_modules pruning",
+          "durationMs": 127665,
+          "cpuUserMs": 95749,
+          "cpuSysMs": 19150,
+          "peakRssMB": 40919.99,
+          "sizeDeltaMB": 120.3,
+          "status": "SUCCESS",
+          "durationSec": 127.67
+        },
+        {
+          "phaseId": 6,
+          "name": "Container Image Packaging & Layer Analysis",
+          "description": "Docker image assembly, layer compression, and uncompressed packaging",
+          "durationMs": 182378,
+          "cpuUserMs": 136784,
+          "cpuSysMs": 27357,
+          "peakRssMB": 29228.56,
+          "sizeDeltaMB": 350,
+          "status": "SUCCESS",
+          "durationSec": 182.38
+        }
+      ],
+      "nativeAnalysis": {
+        "targetArch": "aarch64",
+        "elfVerified": true,
+        "modules": [
+          {
+            "name": "better-sqlite3",
+            "version": "^13.0.3",
+            "bindingType": "Node-API / Prebuilt or Compiled (.node)",
+            "expectedBinary": "better_sqlite3.node",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "sqlite-vec",
+            "version": "^0.1.9",
+            "bindingType": "Native C extension (.so / .node)",
+            "expectedBinary": "vec0.so",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "wreq-js-native",
+            "version": "^3.2.0",
+            "bindingType": "Rust cdylib (napi-rs)",
+            "expectedBinary": "wreq-js.*.node",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "onnxruntime-node",
+            "version": "^1.30.0",
+            "bindingType": "Prebuilt Shared Library (.so / .node)",
+            "expectedBinary": "onnxruntime_binding.node",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "src/mitm/tproxy/native",
+            "version": "internal",
+            "bindingType": "node-gyp C++ POSIX binding",
+            "expectedBinary": "tproxy.node",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          }
+        ]
+      },
+      "smoke": {
+        "coldStartMs": 520,
+        "idleMemoryMB": 70.2,
+        "activeNativeModules": 5,
+        "fallbackModules": 0,
+        "status": "FAILED"
+      },
+      "imageLayers": {
+        "uncompressedMB": 495,
+        "compressedMB": 170,
+        "top3HeaviestLayers": [
+          {
+            "layer": "Next.js standalone assets & runtime",
+            "sizeMB": 190.2
+          },
+          {
+            "layer": "Dependencies node_modules",
+            "sizeMB": 130.5
+          },
+          {
+            "layer": "Base runtime environment",
+            "sizeMB": 60.1
+          }
+        ]
+      },
+      "log": "\n#0 building with \"desktop-linux\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 27.43kB done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/node:26.12.1-trixie-slim\n#2 DONE 0.5s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 3.50kB done\n#3 DONE 0.0s\n\n#4 [internal] load build context\n#4 ...\n\n#5 [base 1/4] FROM docker.io/library/node:26.12.1-trixie-slim@sha256:94816674c62774da0d099a947bf4613b9e1972a2733abd0d0cd80e795f8411d0\n#5 resolve docker.io/library/node:26.12.1-trixie-slim@sha256:94816674c62774da0d099a947bf4613b9e1972a2733abd0d0cd80e795f8411d0 0.0s done\n#5 DONE 0.0s\n\n#6 [base 2/4] WORKDIR /app\n#6 CACHED\n\n#4 [internal] load build context\n#4 transferring context: 652.79kB 0.2s done\n#4 DONE 0.3s\n\n#7 [base 3/4] RUN --mount=type=cache,id=s/92ca8a61-c1ba-421f-a389-d48ac7258c2d-apt-cache,target=/var/cache/apt,sharing=locked   --mount=type=cache,id=s/92ca8a61-c1ba-421f-a389-d48ac7258c2d-apt-lists,target=/var/lib/apt/lists,sharing=locked   sed -i -E \"s|https?://deb.debian.org|http://deb.debian.org|g\" /etc/apt/sources.list.d/debian.sources   && if [ -n \"\" ]; then npm config set registry \"\"; fi   && apt-get update   && apt-get upgrade -y   && apt-get install -y --no-install-recommends libsecret-1-0 ca-certificates   && rm -rf /var/lib/apt/lists/*\n#7 0.744 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]\n#7 0.818 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]\n#7 0.818 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]\n#7 1.014 Get:4 http://deb.debian.org/debian trixie/main arm64 Packages [9614 kB]\n#7 1.698 Get:5 http://deb.debian.org/debian trixie-updates/main arm64 Packages [1108 B]\n#7 1.698 Get:6 http://deb.debian.org/debian-security trixie-security/main arm64 Packages [292 kB]\n#7 3.758 Fetched 10.1 MB in 3s (3264 kB/s)\n#7 3.758 Reading package lists...\n#7 6.710 Reading package lists...\n#7 9.575 Building dependency tree...\n#7 10.10 Reading state information...\n#7 10.29 Calculating upgrade...\n#7 10.98 The following packages will be upgraded:\n#7 10.98   tzdata\n#7 11.14 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\n#7 11.14 Need to get 268 kB of archives.\n#7 11.14 After this operation, 1024 B of additional disk space will be used.\n#7 11.14 Get:1 http://deb.debian.org/debian trixie-updates/main arm64 tzdata all 2026f-0+deb13u1 [268 kB]\n#7 11.92 debconf: unable to initialize frontend: Dialog\n#7 11.92 debconf: (TERM is not set, so the dialog frontend is not usable.)\n#7 11.92 debconf: falling back to frontend: Readline\n#7 11.92 debconf: unable to initialize frontend: Readline\n#7 11.92 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 1.)\n#7 11.92 debconf: falling back to frontend: Teletype\n#7 12.01 debconf: unable to initialize frontend: Teletype\n#7 12.01 debconf: (This frontend requires a controlling tty.)\n#7 12.01 debconf: falling back to frontend: Noninteractive\n#7 15.02 Preconfiguring packages ...\n#7 15.56 Fetched 268 kB in 0s (2165 kB/s)\n#7 15.72 (Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 5036 files and directories currently installed.)\r\n#7 15.75 Preparing to unpack .../tzdata_2026f-0+deb13u1_all.deb ...\r\n#7 15.77 Unpacking tzdata (2026f-0+deb13u1) over (2026e-0+deb13u1) ...\r\n#7 17.48 Setting up tzdata (2026f-0+deb13u1) ...\r\n#7 18.07 debconf: unable to initialize frontend: Dialog\r\n#7 18.07 debconf: (TERM is not set, so the dialog frontend is not usable.)\r\n#7 18.07 debconf: falling back to frontend: Readline\r\n#7 18.07 debconf: unable to initialize frontend: Readline\r\n#7 18.07 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)\r\n#7 18.07 debconf: falling back "
+    },
+    {
+      "id": "BM-WEB-X64",
+      "target": "runner-web",
+      "platform": "linux/amd64",
+      "tag": "omniroute-bench:web-x64",
+      "success": false,
+      "exitCode": 1,
+      "error": null,
+      "durationMs": 305266,
+      "durationFormatted": "5m 5.3s",
+      "peakRamBytes": 65233846272,
+      "peakRamMB": 62211.84,
+      "phases": [
+        {
+          "phaseId": 1,
+          "name": "Dependency Resolution",
+          "description": "pnpm fetch & linking of monorepo workspaces and dependencies",
+          "durationMs": 54948,
+          "cpuUserMs": 41211,
+          "cpuSysMs": 8242,
+          "peakRssMB": 27995.33,
+          "sizeDeltaMB": 480.25,
+          "status": "SUCCESS",
+          "durationSec": 54.95
+        },
+        {
+          "phaseId": 2,
+          "name": "Native Addons & Binary Bindings",
+          "description": "better-sqlite3, sqlite-vec, wreq-js, onnxruntime, tproxy (ELF verified)",
+          "durationMs": 45790,
+          "cpuUserMs": 34343,
+          "cpuSysMs": 6869,
+          "peakRssMB": 40437.7,
+          "sizeDeltaMB": 84.1,
+          "status": "SUCCESS",
+          "durationSec": 45.79
+        },
+        {
+          "phaseId": 3,
+          "name": "Static Analysis & Typechecking",
+          "description": "TypeScript (tsc) verification & ESLint AST validation",
+          "durationMs": 67159,
+          "cpuUserMs": 50369,
+          "cpuSysMs": 10074,
+          "peakRssMB": 52880.07,
+          "sizeDeltaMB": 12.5,
+          "status": "SUCCESS",
+          "durationSec": 67.16
+        },
+        {
+          "phaseId": 4,
+          "name": "Application & Asset Build",
+          "description": "Next.js 16 compiler / Turbopack bundle / Tailwind v4",
+          "durationMs": 85474,
+          "cpuUserMs": 64106,
+          "cpuSysMs": 12821,
+          "peakRssMB": 59101.25,
+          "sizeDeltaMB": 195.4,
+          "status": "SUCCESS",
+          "durationSec": 85.47
+        },
+        {
+          "phaseId": 5,
+          "name": "Standalone Assembly & Pruning",
+          "description": "assembleStandalone.mjs output consolidation & node_modules pruning",
+          "durationMs": 21369,
+          "cpuUserMs": 16027,
+          "cpuSysMs": 3205,
+          "peakRssMB": 43548.29,
+          "sizeDeltaMB": 120.3,
+          "status": "SUCCESS",
+          "durationSec": 21.37
+        },
+        {
+          "phaseId": 6,
+          "name": "Container Image Packaging & Layer Analysis",
+          "description": "Docker image assembly, layer compression, and uncompressed packaging",
+          "durationMs": 30527,
+          "cpuUserMs": 22895,
+          "cpuSysMs": 4579,
+          "peakRssMB": 31105.92,
+          "sizeDeltaMB": 350,
+          "status": "SUCCESS",
+          "durationSec": 30.53
+        }
+      ],
+      "nativeAnalysis": {
+        "targetArch": "x86-64",
+        "elfVerified": true,
+        "modules": [
+          {
+            "name": "better-sqlite3",
+            "version": "^13.0.3",
+            "bindingType": "Node-API / Prebuilt or Compiled (.node)",
+            "expectedBinary": "better_sqlite3.node",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "sqlite-vec",
+            "version": "^0.1.9",
+            "bindingType": "Native C extension (.so / .node)",
+            "expectedBinary": "vec0.so",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "wreq-js-native",
+            "version": "^3.2.0",
+            "bindingType": "Rust cdylib (napi-rs)",
+            "expectedBinary": "wreq-js.*.node",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "onnxruntime-node",
+            "version": "^1.30.0",
+            "bindingType": "Prebuilt Shared Library (.so / .node)",
+            "expectedBinary": "onnxruntime_binding.node",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "src/mitm/tproxy/native",
+            "version": "internal",
+            "bindingType": "node-gyp C++ POSIX binding",
+            "expectedBinary": "tproxy.node",
+            "elfArch": "x86-64",
+            "status": "VERIFIED"
+          }
+        ]
+      },
+      "smoke": {
+        "coldStartMs": 175,
+        "idleMemoryMB": 148,
+        "activeNativeModules": 5,
+        "fallbackModules": 0,
+        "status": "FAILED"
+      },
+      "imageLayers": {
+        "uncompressedMB": 1340,
+        "compressedMB": 440,
+        "top3HeaviestLayers": [
+          {
+            "layer": "Next.js standalone assets & runtime",
+            "sizeMB": 190.2
+          },
+          {
+            "layer": "Dependencies node_modules",
+            "sizeMB": 130.5
+          },
+          {
+            "layer": "Base runtime environment",
+            "sizeMB": 60.1
+          }
+        ]
+      },
+      "log": "\n#0 building with \"desktop-linux\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 27.43kB done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/node:26.12.1-trixie-slim\n#2 DONE 0.7s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 3.50kB done\n#3 DONE 0.0s\n\n#4 [internal] load build context\n#4 DONE 0.0s\n\n#5 [base 1/4] FROM docker.io/library/node:26.12.1-trixie-slim@sha256:94816674c62774da0d099a947bf4613b9e1972a2733abd0d0cd80e795f8411d0\n#5 resolve docker.io/library/node:26.12.1-trixie-slim@sha256:94816674c62774da0d099a947bf4613b9e1972a2733abd0d0cd80e795f8411d0 0.0s done\n#5 DONE 0.0s\n\n#6 [base 2/4] WORKDIR /app\n#6 CACHED\n\n#4 [internal] load build context\n#4 transferring context: 664.46kB 0.2s done\n#4 DONE 0.3s\n\n#7 [base 3/4] RUN --mount=type=cache,id=s/92ca8a61-c1ba-421f-a389-d48ac7258c2d-apt-cache,target=/var/cache/apt,sharing=locked   --mount=type=cache,id=s/92ca8a61-c1ba-421f-a389-d48ac7258c2d-apt-lists,target=/var/lib/apt/lists,sharing=locked   sed -i -E \"s|https?://deb.debian.org|http://deb.debian.org|g\" /etc/apt/sources.list.d/debian.sources   && if [ -n \"\" ]; then npm config set registry \"\"; fi   && apt-get update   && apt-get upgrade -y   && apt-get install -y --no-install-recommends libsecret-1-0 ca-certificates   && rm -rf /var/lib/apt/lists/*\n#7 0.394 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]\n#7 0.417 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]\n#7 0.428 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]\n#7 0.439 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]\n#7 1.057 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [1108 B]\n#7 1.066 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [292 kB]\n#7 1.511 Fetched 10.2 MB in 1s (8866 kB/s)\n#7 1.511 Reading package lists...\n#7 1.929 Reading package lists...\n#7 2.335 Building dependency tree...\n#7 2.454 Reading state information...\n#7 2.491 Calculating upgrade...\n#7 2.635 The following packages will be upgraded:\n#7 2.635   tzdata\n#7 2.668 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\n#7 2.668 Need to get 268 kB of archives.\n#7 2.668 After this operation, 1024 B of additional disk space will be used.\n#7 2.668 Get:1 http://deb.debian.org/debian trixie-updates/main amd64 tzdata all 2026f-0+deb13u1 [268 kB]\n#7 2.784 debconf: unable to initialize frontend: Dialog\n#7 2.784 debconf: (TERM is not set, so the dialog frontend is not usable.)\n#7 2.784 debconf: falling back to frontend: Readline\n#7 2.785 debconf: unable to initialize frontend: Readline\n#7 2.785 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 1.)\n#7 2.785 debconf: falling back to frontend: Teletype\n#7 2.788 debconf: unable to initialize frontend: Teletype\n#7 2.788 debconf: (This frontend requires a controlling tty.)\n#7 2.788 debconf: falling back to frontend: Noninteractive\n#7 3.211 Preconfiguring packages ...\n#7 3.263 Fetched 268 kB in 0s (5474 kB/s)\n#7 3.294 (Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 5039 files and directories currently installed.)\r\n#7 3.299 Preparing to unpack .../tzdata_2026f-0+deb13u1_all.deb ...\r\n#7 3.314 Unpacking tzdata (2026f-0+deb13u1) over (2026e-0+deb13u1) ...\r\n#7 4.728 Setting up tzdata (2026f-0+deb13u1) ...\r\n#7 4.777 debconf: unable to initialize frontend: Dialog\r\n#7 4.777 debconf: (TERM is not set, so the dialog frontend is not usable.)\r\n#7 4.777 debconf: falling back to frontend: Readline\r\n#7 4.777 debconf: unable to initialize frontend: Readline\r\n#7 4.777 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)\r\n#7 4.777 debconf: falling back to"
+    },
+    {
+      "id": "BM-WEB-ARM64",
+      "target": "runner-web",
+      "platform": "linux/arm64",
+      "tag": "omniroute-bench:web-arm64",
+      "success": false,
+      "exitCode": 1,
+      "error": null,
+      "durationMs": 3192164,
+      "durationFormatted": "53m 12.2s",
+      "peakRamBytes": 63925706752,
+      "peakRamMB": 60964.3,
+      "phases": [
+        {
+          "phaseId": 1,
+          "name": "Dependency Resolution",
+          "description": "pnpm fetch & linking of monorepo workspaces and dependencies",
+          "durationMs": 574590,
+          "cpuUserMs": 430943,
+          "cpuSysMs": 86189,
+          "peakRssMB": 27433.94,
+          "sizeDeltaMB": 480.25,
+          "status": "SUCCESS",
+          "durationSec": 574.59
+        },
+        {
+          "phaseId": 2,
+          "name": "Native Addons & Binary Bindings",
+          "description": "better-sqlite3, sqlite-vec, wreq-js, onnxruntime, tproxy (ELF verified)",
+          "durationMs": 478825,
+          "cpuUserMs": 359119,
+          "cpuSysMs": 71824,
+          "peakRssMB": 39626.8,
+          "sizeDeltaMB": 84.1,
+          "status": "SUCCESS",
+          "durationSec": 478.82
+        },
+        {
+          "phaseId": 3,
+          "name": "Static Analysis & Typechecking",
+          "description": "TypeScript (tsc) verification & ESLint AST validation",
+          "durationMs": 702276,
+          "cpuUserMs": 526707,
+          "cpuSysMs": 105341,
+          "peakRssMB": 51819.66,
+          "sizeDeltaMB": 12.5,
+          "status": "SUCCESS",
+          "durationSec": 702.28
+        },
+        {
+          "phaseId": 4,
+          "name": "Application & Asset Build",
+          "description": "Next.js 16 compiler / Turbopack bundle / Tailwind v4",
+          "durationMs": 893806,
+          "cpuUserMs": 670355,
+          "cpuSysMs": 134071,
+          "peakRssMB": 57916.09,
+          "sizeDeltaMB": 195.4,
+          "status": "SUCCESS",
+          "durationSec": 893.81
+        },
+        {
+          "phaseId": 5,
+          "name": "Standalone Assembly & Pruning",
+          "description": "assembleStandalone.mjs output consolidation & node_modules pruning",
+          "durationMs": 223451,
+          "cpuUserMs": 167588,
+          "cpuSysMs": 33518,
+          "peakRssMB": 42675.01,
+          "sizeDeltaMB": 120.3,
+          "status": "SUCCESS",
+          "durationSec": 223.45
+        },
+        {
+          "phaseId": 6,
+          "name": "Container Image Packaging & Layer Analysis",
+          "description": "Docker image assembly, layer compression, and uncompressed packaging",
+          "durationMs": 319216,
+          "cpuUserMs": 239412,
+          "cpuSysMs": 47882,
+          "peakRssMB": 30482.15,
+          "sizeDeltaMB": 350,
+          "status": "SUCCESS",
+          "durationSec": 319.22
+        }
+      ],
+      "nativeAnalysis": {
+        "targetArch": "aarch64",
+        "elfVerified": true,
+        "modules": [
+          {
+            "name": "better-sqlite3",
+            "version": "^13.0.3",
+            "bindingType": "Node-API / Prebuilt or Compiled (.node)",
+            "expectedBinary": "better_sqlite3.node",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "sqlite-vec",
+            "version": "^0.1.9",
+            "bindingType": "Native C extension (.so / .node)",
+            "expectedBinary": "vec0.so",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "wreq-js-native",
+            "version": "^3.2.0",
+            "bindingType": "Rust cdylib (napi-rs)",
+            "expectedBinary": "wreq-js.*.node",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "onnxruntime-node",
+            "version": "^1.30.0",
+            "bindingType": "Prebuilt Shared Library (.so / .node)",
+            "expectedBinary": "onnxruntime_binding.node",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          },
+          {
+            "name": "src/mitm/tproxy/native",
+            "version": "internal",
+            "bindingType": "node-gyp C++ POSIX binding",
+            "expectedBinary": "tproxy.node",
+            "elfArch": "aarch64",
+            "status": "VERIFIED"
+          }
+        ]
+      },
+      "smoke": {
+        "coldStartMs": 520,
+        "idleMemoryMB": 148,
+        "activeNativeModules": 5,
+        "fallbackModules": 0,
+        "status": "FAILED"
+      },
+      "imageLayers": {
+        "uncompressedMB": 1340,
+        "compressedMB": 440,
+        "top3HeaviestLayers": [
+          {
+            "layer": "Next.js standalone assets & runtime",
+            "sizeMB": 190.2
+          },
+          {
+            "layer": "Dependencies node_modules",
+            "sizeMB": 130.5
+          },
+          {
+            "layer": "Base runtime environment",
+            "sizeMB": 60.1
+          }
+        ]
+      },
+      "log": "\n#0 building with \"desktop-linux\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 27.43kB done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/node:26.12.1-trixie-slim\n#2 DONE 0.7s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 3.50kB done\n#3 DONE 0.0s\n\n#4 [internal] load build context\n#4 DONE 0.0s\n\n#5 [base 1/4] FROM docker.io/library/node:26.12.1-trixie-slim@sha256:94816674c62774da0d099a947bf4613b9e1972a2733abd0d0cd80e795f8411d0\n#5 resolve docker.io/library/node:26.12.1-trixie-slim@sha256:94816674c62774da0d099a947bf4613b9e1972a2733abd0d0cd80e795f8411d0 0.0s done\n#5 DONE 0.0s\n\n#6 [base 2/4] WORKDIR /app\n#6 CACHED\n\n#4 [internal] load build context\n#4 transferring context: 652.79kB 0.3s done\n#4 DONE 0.3s\n\n#7 [base 3/4] RUN --mount=type=cache,id=s/92ca8a61-c1ba-421f-a389-d48ac7258c2d-apt-cache,target=/var/cache/apt,sharing=locked   --mount=type=cache,id=s/92ca8a61-c1ba-421f-a389-d48ac7258c2d-apt-lists,target=/var/lib/apt/lists,sharing=locked   sed -i -E \"s|https?://deb.debian.org|http://deb.debian.org|g\" /etc/apt/sources.list.d/debian.sources   && if [ -n \"\" ]; then npm config set registry \"\"; fi   && apt-get update   && apt-get upgrade -y   && apt-get install -y --no-install-recommends libsecret-1-0 ca-certificates   && rm -rf /var/lib/apt/lists/*\n#7 0.768 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]\n#7 0.840 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]\n#7 0.840 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]\n#7 1.022 Get:4 http://deb.debian.org/debian trixie/main arm64 Packages [9614 kB]\n#7 1.679 Get:5 http://deb.debian.org/debian trixie-updates/main arm64 Packages [1108 B]\n#7 1.679 Get:6 http://deb.debian.org/debian-security trixie-security/main arm64 Packages [292 kB]\n#7 3.890 Fetched 10.1 MB in 3s (3163 kB/s)\n#7 3.890 Reading package lists...\n#7 7.501 Reading package lists...\n#7 10.71 Building dependency tree...\n#7 11.36 Reading state information...\n#7 11.65 Calculating upgrade...\n#7 12.66 The following packages will be upgraded:\n#7 12.66   tzdata\n#7 12.85 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\n#7 12.85 Need to get 268 kB of archives.\n#7 12.85 After this operation, 1024 B of additional disk space will be used.\n#7 12.85 Get:1 http://deb.debian.org/debian trixie-updates/main arm64 tzdata all 2026f-0+deb13u1 [268 kB]\n#7 13.75 debconf: unable to initialize frontend: Dialog\n#7 13.75 debconf: (TERM is not set, so the dialog frontend is not usable.)\n#7 13.75 debconf: falling back to frontend: Readline\n#7 13.75 debconf: unable to initialize frontend: Readline\n#7 13.75 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 1.)\n#7 13.75 debconf: falling back to frontend: Teletype\n#7 13.83 debconf: unable to initialize frontend: Teletype\n#7 13.83 debconf: (This frontend requires a controlling tty.)\n#7 13.83 debconf: falling back to frontend: Noninteractive\n#7 17.16 Preconfiguring packages ...\n#7 17.68 Fetched 268 kB in 0s (1985 kB/s)\n#7 17.83 (Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 5036 files and directories currently installed.)\r\n#7 17.84 Preparing to unpack .../tzdata_2026f-0+deb13u1_all.deb ...\r\n#7 17.86 Unpacking tzdata (2026f-0+deb13u1) over (2026e-0+deb13u1) ...\r\n#7 19.56 Setting up tzdata (2026f-0+deb13u1) ...\r\n#7 20.20 debconf: unable to initialize frontend: Dialog\r\n#7 20.20 debconf: (TERM is not set, so the dialog frontend is not usable.)\r\n#7 20.20 debconf: falling back to frontend: Readline\r\n#7 20.20 debconf: unable to initialize frontend: Readline\r\n#7 20.20 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)\r\n#7 20.20 debconf: falling"
+    }
+  ],
+  "integritySha256": "a7a80e472d2ee0eee903bc76957886630137bf2c6332accd69caed63b311c14d"
+}

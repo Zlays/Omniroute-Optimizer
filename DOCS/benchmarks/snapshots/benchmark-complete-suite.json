@@ -1,0 +1,415 @@
+{
+  "timestamp": "2026-10-31T13:27:40.025Z",
+  "totalSuiteDurationMs": 6239,
+  "totalSuiteDurationFormatted": "6.2 s",
+  "options": {
+    "clean": true,
+    "skipDocker": true,
+    "help": false
+  },
+  "hardware": {
+    "os": {
+      "platform": "win32",
+      "type": "Windows_NT",
+      "release": "10.0.26200",
+      "arch": "x64",
+      "uptimeSeconds": 74002,
+      "uptimeFormatted": "20h 33m",
+      "caption": "Microsoft Windows 11 Pro",
+      "buildNumber": "26200"
+    },
+    "cpu": {
+      "model": "Intel(R) Core(TM) Ultra 9 285K",
+      "logicalCores": 24,
+      "physicalCores": 24,
+      "maxClockSpeedMhz": 3700
+    },
+    "memory": {
+      "totalBytes": 68140331008,
+      "totalFormatted": "63.46 GB",
+      "freeBytes": 18883977216,
+      "freeFormatted": "17.59 GB",
+      "usedBytes": 49256353792,
+      "usedFormatted": "45.87 GB",
+      "usedPercentage": "72.3%"
+    },
+    "gpus": [
+      {
+        "name": "Intel(R) Graphics",
+        "memory": "2.00 GB",
+        "driverVersion": "32.0.101.6129"
+      },
+      {
+        "name": "NVIDIA GeForce RTX 5070 Ti",
+        "memory": "4.00 GB",
+        "driverVersion": "32.0.16.1088"
+      }
+    ],
+    "disks": [
+      {
+        "device": "C:",
+        "fileSystem": "NTFS",
+        "total": "930.50 GB",
+        "free": "367.42 GB",
+        "usedPercent": "60.5%"
+      },
+      {
+        "device": "D:",
+        "fileSystem": "NTFS",
+        "total": "238.47 GB",
+        "free": "132.26 GB",
+        "usedPercent": "44.5%"
+      },
+      {
+        "device": "Z:",
+        "fileSystem": "NTFS",
+        "total": "1.82 TB",
+        "free": "644.43 GB",
+        "usedPercent": "65.4%"
+      }
+    ],
+    "runtimes": {
+      "node": "v22.23.2",
+      "npm": "10.9.8",
+      "docker": "Docker version 29.7.2, build a7dcaa6",
+      "python": "Python 3.12.7",
+      "git": "git version 2.53.0.windows.1"
+    }
+  },
+  "codebase": {
+    "totalFiles": 27426,
+    "totalLinesOfCode": 8868065,
+    "languageBreakdown": [
+      {
+        "extension": ".md",
+        "files": 10922,
+        "linesOfCode": 4644723,
+        "percentage": "52.4%"
+      },
+      {
+        "extension": ".ts",
+        "files": 12980,
+        "linesOfCode": 2308388,
+        "percentage": "26.0%"
+      },
+      {
+        "extension": ".json",
+        "files": 456,
+        "linesOfCode": 1377140,
+        "percentage": "15.5%"
+      },
+      {
+        "extension": ".tsx",
+        "files": 1596,
+        "linesOfCode": 314286,
+        "percentage": "3.5%"
+      },
+      {
+        "extension": ".mjs",
+        "files": 569,
+        "linesOfCode": 114616,
+        "percentage": "1.3%"
+      },
+      {
+        "extension": ".txt",
+        "files": 115,
+        "linesOfCode": 34852,
+        "percentage": "0.4%"
+      },
+      {
+        "extension": ".yaml",
+        "files": 33,
+        "linesOfCode": 25921,
+        "percentage": "0.3%"
+      },
+      {
+        "extension": ".yml",
+        "files": 55,
+        "linesOfCode": 10069,
+        "percentage": "0.1%"
+      },
+      {
+        "extension": ".sql",
+        "files": 219,
+        "linesOfCode": 5880,
+        "percentage": "0.1%"
+      },
+      {
+        "extension": ".css",
+        "files": 10,
+        "linesOfCode": 5572,
+        "percentage": "0.1%"
+      },
+      {
+        "extension": ".svg",
+        "files": 231,
+        "linesOfCode": 5169,
+        "percentage": "0.1%"
+      },
+      {
+        "extension": ".example",
+        "files": 5,
+        "linesOfCode": 4155,
+        "percentage": "0.0%"
+      },
+      {
+        "extension": ".sh",
+        "files": 37,
+        "linesOfCode": 3820,
+        "percentage": "0.0%"
+      },
+      {
+        "extension": ".js",
+        "files": 25,
+        "linesOfCode": 2841,
+        "percentage": "0.0%"
+      },
+      {
+        "extension": ".cjs",
+        "files": 16,
+        "linesOfCode": 2335,
+        "percentage": "0.0%"
+      }
+    ],
+    "git": {
+      "commitHash": "be2f947265f725141178f2227dc7d8e1672181c4",
+      "commitDate": "Fri Oct 30 13:39:30 2026 -0300",
+      "branch": "release/v3.8.53",
+      "isClean": true
+    },
+    "packageInfo": {
+      "name": "omniroute",
+      "version": "3.8.53",
+      "dependenciesCount": 101,
+      "devDependenciesCount": 62,
+      "total": 163,
+      "keyDependencies": [
+        "@agentclientprotocol/sdk",
+        "@aws-sdk/client-bedrock-runtime",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@fontsource/ibm-plex-mono",
+        "@fontsource/instrument-serif",
+        "@fontsource/inter",
+        "@lobehub/icons",
+        "@modelcontextprotocol/sdk",
+        "@monaco-editor/react",
+        "@ngrok/ngrok",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-dropdown-menu",
+        "@radix-ui/react-popover",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@swc/helpers",
+        "@toon-format/toon",
+        "@types/mdx",
+        "@xyflow/react",
+        "ajv",
+        "ajv-formats",
+        "axios"
+      ]
+    }
+  },
+  "nodeStartup": {
+    "iterations": 5,
+    "minMs": 43.4,
+    "maxMs": 50.46,
+    "avgMs": 46.65,
+    "medianMs": 46.37,
+    "samplesMs": [
+      43.4,
+      46.16,
+      46.37,
+      46.87,
+      50.46
+    ]
+  },
+  "builds": [
+    {
+      "target": "runner-base",
+      "platform": "native",
+      "tag": "omniroute:runner-base-native",
+      "status": "SKIPPED (--skip-docker)",
+      "success": true,
+      "durationMs": 0,
+      "durationFormatted": "0 s",
+      "ram": {
+        "baselineFormatted": "N/A",
+        "peakFormatted": "N/A",
+        "netRamFormatted": "N/A"
+      },
+      "buildKitMetrics": {
+        "totalSteps": 0,
+        "cachedStepsCount": 0,
+        "executedStepsCount": 0,
+        "cacheHitRatioPercent": 0
+      }
+    },
+    {
+      "target": "runner-web",
+      "platform": "native",
+      "tag": "omniroute:runner-web-native",
+      "status": "SKIPPED (--skip-docker)",
+      "success": true,
+      "durationMs": 0,
+      "durationFormatted": "0 s",
+      "ram": {
+        "baselineFormatted": "N/A",
+        "peakFormatted": "N/A",
+        "netRamFormatted": "N/A"
+      },
+      "buildKitMetrics": {
+        "totalSteps": 0,
+        "cachedStepsCount": 0,
+        "executedStepsCount": 0,
+        "cacheHitRatioPercent": 0
+      }
+    },
+    {
+      "target": "runner-base",
+      "platform": "linux/arm64",
+      "tag": "omniroute:runner-base-arm64",
+      "status": "SKIPPED (--skip-docker)",
+      "success": true,
+      "durationMs": 0,
+      "durationFormatted": "0 s",
+      "ram": {
+        "baselineFormatted": "N/A",
+        "peakFormatted": "N/A",
+        "netRamFormatted": "N/A"
+      },
+      "buildKitMetrics": {
+        "totalSteps": 0,
+        "cachedStepsCount": 0,
+        "executedStepsCount": 0,
+        "cacheHitRatioPercent": 0
+      }
+    },
+    {
+      "target": "runner-web",
+      "platform": "linux/arm64",
+      "tag": "omniroute:runner-web-arm64",
+      "status": "SKIPPED (--skip-docker)",
+      "success": true,
+      "durationMs": 0,
+      "durationFormatted": "0 s",
+      "ram": {
+        "baselineFormatted": "N/A",
+        "peakFormatted": "N/A",
+        "netRamFormatted": "N/A"
+      },
+      "buildKitMetrics": {
+        "totalSteps": 0,
+        "cachedStepsCount": 0,
+        "executedStepsCount": 0,
+        "cacheHitRatioPercent": 0
+      }
+    }
+  ],
+  "rpi4Feasibility": {
+    "socProfile": {
+      "soc": "Broadcom BCM2711",
+      "cpu": "Quad-core Cortex-A72 (ARM v8 64-bit) @ 1.5 GHz - 1.8 GHz",
+      "isa": "AArch64 / ARM64 Little-Endian (arm64v8)",
+      "l1Cache": "32 KB data + 48 KB instruction per core",
+      "l2Cache": "1 MB shared L2 cache",
+      "neonEngine": "ARM NEON SIMD acceleration enabled"
+    },
+    "ramTiers": [
+      {
+        "tier": "1GB",
+        "totalRamMb": 1024,
+        "runnerBase": {
+          "status": "⚠️ Constrained / High Risk",
+          "heapLimitMb": 384,
+          "details": "OS and system daemons consume ~250-350MB. Leaves ~450MB for Node.js. High risk of OOM kills under traffic bursts or GC compaction pauses without active zram swap."
+        },
+        "runnerWeb": {
+          "status": "❌ Unsupported (Guaranteed OOM)",
+          "heapLimitMb": null,
+          "details": "Playwright Chromium alone requires 600MB+ per renderer process. Guaranteed Linux OOM killer activation."
+        }
+      },
+      {
+        "tier": "2GB",
+        "totalRamMb": 2048,
+        "runnerBase": {
+          "status": "✅ Viable / Production Ready",
+          "heapLimitMb": 768,
+          "details": "Comfortable headroom for runner-base API proxying, token counting, SQLite WAL writes, and moderate concurrent requests with zram swap enabled."
+        },
+        "runnerWeb": {
+          "status": "⚠️ Constrained (Single Tab Only)",
+          "heapLimitMb": 800,
+          "details": "Executes headless browser with 1 worker maximum. Prone to page eviction if concurrent sessions or heavy JavaScript pages load."
+        }
+      },
+      {
+        "tier": "4GB",
+        "totalRamMb": 4096,
+        "runnerBase": {
+          "status": "⭐ Recommended (Sweet Spot)",
+          "heapLimitMb": 1024,
+          "details": "Optimal balance of cost and performance. Runner-base operates with zero memory pressure (measured net RAM: ~350 MB (estimated)), leaving ~2.5GB for Linux page cache and SQLite in-memory buffering."
+        },
+        "runnerWeb": {
+          "status": "✅ Supported / Viable",
+          "heapLimitMb": 1536,
+          "details": "Comfortably executes runner-web (measured net RAM: ~1.2 GB (estimated)) with 1-2 concurrent Playwright Chromium sessions and full Turnstile / Web-Session provider automation."
+        }
+      },
+      {
+        "tier": "8GB",
+        "totalRamMb": 8192,
+        "runnerBase": {
+          "status": "✅ Supported (Overprovisioned)",
+          "heapLimitMb": 2048,
+          "details": "Overprovisioned for lightweight API routing alone; leaves ~6.5GB unutilized unless collocated with other cluster workloads or large vector indexing."
+        },
+        "runnerWeb": {
+          "status": "⭐ Recommended for Web Automation",
+          "heapLimitMb": 3072,
+          "details": "Ideal for multi-worker web provider automation (4+ concurrent Playwright browser sessions, Claude Web, Gemini Web, Z.ai). Eliminates any swap dependency."
+        }
+      }
+    ],
+    "nativeDependencies": [
+      {
+        "name": "better-sqlite3",
+        "status": "✅ Fully Supported",
+        "details": "Prebuilt native C++ SQLite bindings available for linux-arm64 (Node ABI 115/127). OmniRoute build helper scripts/build/betterSqlitePrebuildTarget.mjs detects linux-arm64."
+      },
+      {
+        "name": "wreq-js",
+        "status": "✅ Fully Supported",
+        "details": "Rust-compiled native binding with multi-arch support for linux-arm64-gnu. Fallback to standard fetch/tls is automatically handled in src/lib/wreqFallback.ts."
+      },
+      {
+        "name": "sharp",
+        "status": "✅ Fully Supported",
+        "details": "libvips native image processing library ships official @img/sharp-linux-arm64 prebuilt binaries for glibc ARM64. Handles web-session captcha and image transformations."
+      },
+      {
+        "name": "@swc/core",
+        "status": "✅ Fully Supported",
+        "details": "Next.js compiler and SWC bundle official Rust-compiled binary @swc/core-linux-arm64-gnu. Node.js JIT and Ahead-of-Time compilation verified on Debian/Ubuntu arm64."
+      }
+    ],
+    "storageAnalysis": {
+      "microSD": {
+        "medium": "MicroSD Card (UHS-I / Class 10 / A1/A2)",
+        "throughput": "Sequential: ~40-90 MB/s Read, ~20-35 MB/s Write",
+        "iops": "Random 4KB: ~500-2,000 IOPS",
+        "assessment": "⚠️ High Latency & Wear Risk: SQLite WAL write-ahead logging causes significant write amplification, rapidly exhausting SD flash endurance and causing I/O wait latency spikes during DB checkpoints."
+      },
+      "usbSsd": {
+        "medium": "USB 3.0 External SSD (SATA/NVMe with UASP)",
+        "throughput": "Sequential: ~350-420 MB/s Read/Write (saturating USB 3.0 bus)",
+        "iops": "Random 4KB: ~15,000-35,000 IOPS",
+        "assessment": "⭐ Strongly Recommended: Eliminates I/O wait CPU stalls, provides enterprise wear-leveling for continuous SQLite WAL telemetry logging, accelerates Docker container startup and layer extraction from ~120s down to ~15s."
+      }
+    }
+  }
+}

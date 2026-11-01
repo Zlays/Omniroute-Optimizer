@@ -1,0 +1,11 @@
+{
+  "name": "omniroute-optimizer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "benchmark:build": "node scripts/benchmark/omni-bench.mjs",
+    "benchmark:verify": "node scripts/benchmark/omni-bench.mjs --verify",
+    "benchmark:compare": "node scripts/benchmark/omni-bench.mjs --compare-readme"
+  }
+}
